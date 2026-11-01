@@ -13,18 +13,15 @@
         table,
         td {
             border-collapse: collapse;
-            mso-table-lspace: 0pt;
-            mso-table-rspace: 0pt;
             padding: 0;
         }
 
-        img {
+        amp-img {
             border: 0;
             height: auto;
             line-height: 100%;
             outline: none;
             text-decoration: none;
-            -ms-interpolation-mode: bicubic;
         }
 
         .wrapper {
@@ -66,13 +63,12 @@
         }
 
         .hero-container {
-            font-size: 0;
-        
+            -size: 0; 
         }
 
         .hero-container .hero-column {
             width: 100%;
-            max-width: 300px;
+            max-width: 296px;
             display: inline-block;
             vertical-align: middle;
         }
@@ -111,10 +107,16 @@
                                             <table class="nav-content">
                                                 <tr>
                                                     <td>
-                                                        <a href=" #" style="text-decoration: none; color: #3a3a3a;">
-                                                            <img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793493629/amp-logo_izcyul.png"
-                                                                alt="logo icon"
-                                                                style="width: 26px; height: auto; vertical-align: middle;">
+                                                        <a href="https://phosphoricons.com/" style="text-decoration: none; color: #3a3a3a;">
+                                                            <amp-img alt="A view of the sea"
+                                                             src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793493629/amp-logo_izcyul.png" width="1.33" height="1"
+                                                                layout="responsive"
+                                                                style="width: 26px; height: auto;
+                                                                display: inline-block;
+                                                                vertical-align: middle;
+                                                                "
+                                                                >
+                                                            </amp-img>
                                                             <p
                                                                 style="font-size: 16px; display: inline-block; vertical-align: middle; margin: 0; text-align: right;">
                                                                 gadget <span>HUB</span></p>
@@ -155,7 +157,7 @@
                     <table width="100%" role="presentation">
 
                         <tr>
-                            <td class="hero-container">
+                            <td class="hero-container" style="padding: 12px 0px;">
                                 <table class="hero-column">
                                     <tr>
                                         <td class="hero-padding">
@@ -196,16 +198,15 @@
                                 <table class="hero-column">
                                     <tr>
                                         <td class="hero-padding">
-                                            <table class="hero-content>
+                                            <table class="hero-content">
                                                 <tr>
                                                     <td>
-                                                        <amp-img alt="A head Phone"
-                                                            src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793501568/headphone_l0njkk.png"
-                                                            width="250" height="218" layout="responsive" style="
-                                                            display: block;
-                                                    ">
-                                                        </amp-img>
-                                                        <p>ggggggggggggggg</p>
+                                                    <amp-img alt="A head Phone" src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793501568/headphone_l0njkk.png"
+                                                        width="250" height="250" layout="responsive" style="display: block;
+                                                        width: 250px; height: auto;
+                                                        ">
+                                                    </amp-img>
+                                                
                                                     </td>
                                                 </tr>
                                             </table>
