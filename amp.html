@@ -1,15 +1,84 @@
 <!doctype html>
-<html ⚡4email data-css-strict>
+<html ⚡>
 
 <head>
     <meta charset="utf-8">
+    <title>My AMP Page</title>
+    <link rel="canonical" href="self.html" />
+    <meta name="viewport" content="width=device-width" />
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <style amp4email-boilerplate>
+    <style amp-custom>
         body {
             visibility: hidden
         }
-    </style>
-    <style amp-custom>
+
         table,
         td {
             border-collapse: collapse;
@@ -63,7 +132,7 @@
         }
 
         .hero-container {
-            -size: 0; 
+            -size: 0;
         }
 
         .hero-container .hero-column {
@@ -73,17 +142,21 @@
             vertical-align: middle;
         }
 
-         .hero-container .hero-content {
+        .hero-container .hero-content {
             font-size: 16px;
-         }
+        }
 
+        .cart-section {
+            font-size: 0;
+        }
 
-        @media only screen and (max-width: 600px) {
-            .nav-container .nav-item {
-                width: 600px !important;
-                padding: 10px 0 !important;
-            }
-
+        .cart-section .cart-column {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 300px;
+            width: 100%;
+            font-size: 22px;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -107,15 +180,14 @@
                                             <table class="nav-content">
                                                 <tr>
                                                     <td>
-                                                        <a href="https://phosphoricons.com/" style="text-decoration: none; color: #3a3a3a;">
+                                                        <a href="https://phosphoricons.com/"
+                                                            style="text-decoration: none; color: #3a3a3a;">
                                                             <amp-img alt="A view of the sea"
-                                                             src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793493629/amp-logo_izcyul.png" width="1.33" height="1"
-                                                                layout="responsive"
-                                                                style="width: 26px; height: auto;
+                                                                src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793493629/amp-logo_izcyul.png"
+                                                                width="1.33" height="1" layout="responsive" style="width: 26px; height: auto;
                                                                 display: inline-block;
                                                                 vertical-align: middle;
-                                                                "
-                                                                >
+                                                                ">
                                                             </amp-img>
                                                             <p
                                                                 style="font-size: 16px; display: inline-block; vertical-align: middle; margin: 0; text-align: right;">
@@ -201,12 +273,13 @@
                                             <table class="hero-content">
                                                 <tr>
                                                     <td>
-                                                    <amp-img alt="A head Phone" src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793501568/headphone_l0njkk.png"
-                                                        width="250" height="250" layout="responsive" style="display: block;
+                                                        <amp-img alt="A head Phone"
+                                                            src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793501568/headphone_l0njkk.png"
+                                                            width="250" height="250" layout="responsive" style="display: block;
                                                         width: 250px; height: auto;
                                                         ">
-                                                    </amp-img>
-                                                
+                                                        </amp-img>
+
                                                     </td>
                                                 </tr>
                                             </table>
@@ -215,6 +288,42 @@
                                 </table>
                             </td>
                         </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td class="cart-section">
+                                <table class="cart-column">
+                                    <tr>
+                                        <td>
+                                            <p>Your cart</p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="cart-column">
+                                    <tr>
+                                        <td align="left">
+                                            <p style="margin: 0; display: inline-block;
+                                           vertical-align: middle;
+                                        ">
+                                                3 Items</p>
+                                            <amp-img alt="A view of the sea"
+                                                src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793592286/amp-cart_djfd3u.png"
+                                                width="27" height="27" layout="responsive" style="display: inline-block; vertical-align: middle;
+                                            width: 27px; height: auto;
+                                            ">
+                                            </amp-img>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
                     </table>
                 </td>
             </tr>
