@@ -146,6 +146,10 @@
             font-size: 16px;
         }
 
+        .hero-padding {
+            padding: 12px 50px;
+        }
+
         .cart-section {
             font-size: 0;
         }
@@ -229,18 +233,21 @@
                     <table width="100%" role="presentation">
 
                         <tr>
-                            <td class="hero-container" style="padding: 12px 0px;">
+                            <td class="hero-container">
                                 <table class="hero-column">
                                     <tr>
                                         <td class="hero-padding">
                                             <table class="hero-content">
                                                 <tr>
                                                     <td>
-                                                        <p>you left something behind</p>
-                                                        <h1>Your cart is waiting</h1>
-                                                        <p>look like you didn’t get a chance to complete your order,your
-                                                            favorite
-                                                            items are here and ready where are!</p>
+                                                        <p style="text-transform: uppercase;
+                                                             font-size: 12px;
+                                                        ">
+                                                            you left something behind</p>
+                                                        <h1 style="margin: 14px 0;">
+                                                        Your cart is waiting</h1>
+                                                        <p>look like you didn’t get a chance to complete your order,your favorite
+                                                       items are here and ready where are!</p>
                                                     </td>
                                                 </tr>
 
@@ -251,11 +258,11 @@
                                                             style="border-collapse:separate;line-height:100%;">
                                                             <tr>
                                                                 <td>
-                                                                    <div>
-                                                                        <!--[if mso]> <v:roundrect xmlns_v="urn:schemas-microsoft-com:vml" xmlns_w="urn:schemas-microsoft-com:office:word" href="https://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" strokecolor="#19cca3" fillcolor="#19cca3;width: 130;"> <w:anchorlock/> <center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Click here!</center> </v:roundrect> <![endif]-->
-                                                                        <a href="https://www.activecampaign.com"
-                                                                            style="display: inline-block; mso-hide:all; background-color: #19cca3; color: #FFFFFF; border:1px solid #19cca3; border-radius: 6px; line-height: 220%; width: 200px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:600; text-align: center; text-decoration: none; -webkit-text-size-adjust:none; "
-                                                                            target="_blank">Click here!</a> </a>
+                                                                 <div>
+                                                                <!--[if mso]> <v:roundrect xmlns_v="urn:schemas-microsoft-com:vml" xmlns_w="urn:schemas-microsoft-com:office:word" href="https://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" strokecolor="#0088FF" fillcolor="#0088FF;width: 130;"> <w:anchorlock/> <center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 500;">Click here!</center> </v:roundrect> <![endif]-->
+                                                                  <a href="https://www.activecampaign.com"
+                                                                style="display: inline-block; mso-hide:all; background-color: #0088FF; color: #FFFFFF; border:1px solid #0088FF; border-radius: 6px; line-height: 220%; width: 200px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:500; text-align: center; text-decoration: none; -webkit-text-size-adjust:none; "
+                                                                target="_blank">Complete Your Order</a> </a>
                                                                     </div>
                                                                 </td>
                                                             </tr>
@@ -299,25 +306,35 @@
                             <td class="cart-section">
                                 <table class="cart-column">
                                     <tr>
-                                        <td>
+                                        <td class="cart-padding" style="padding-left: 40px;">
+                                           <table class="cart-content">
+                                            <tr>
+                                                <td>
                                             <p>Your cart</p>
+                                                </td>
+                                            </tr>
+                                           </table>
                                         </td>
                                     </tr>
                                 </table>
 
                                 <table class="cart-column">
                                     <tr>
-                                        <td align="left">
-                                            <p style="margin: 0; display: inline-block;
-                                           vertical-align: middle;
-                                        ">
-                                                3 Items</p>
-                                            <amp-img alt="A view of the sea"
-                                                src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793592286/amp-cart_djfd3u.png"
-                                                width="27" height="27" layout="responsive" style="display: inline-block; vertical-align: middle;
-                                            width: 27px; height: auto;
+                                        <td class="cart-padding" 
+                                        style="padding-left: 150px;"
+                                        >
+                                        <table class="cart-content">
+                                            <tr>
+                                            <td>
+                                            <p style="margin: 0; display: inline-block;vertical-align: middle;
                                             ">
+                                            3 Items</p>
+                                            <amp-img alt="A view of the sea" src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793592286/amp-cart_djfd3u.png"
+                                                width="27" height="27" layout="responsive" style="display: inline-block; vertical-align: middle; width: 27px; height: auto;">
                                             </amp-img>
+                                                </td>
+                                            </tr>
+                                        </table>
                                         </td>
                                     </tr>
                                 </table>
@@ -327,8 +344,47 @@
                     </table>
                 </td>
             </tr>
+
+        <tr>
+            <td>
+                <table width="100%" role="presentation">
+
+                <tr>
+                    <td class="cart-products-container">
+
+                        <table class="cart-products">
+                            <tr>
+                                <td class="cart product-padding">
+                                    <table class="cart-products-content">
+                                        <tr>
+                                            <td>
+                                                <amp-img
+                                                 alt="A view of the sea"
+                                                    src="https://res.cloudinary.com/qyksrgfe/image/upload/v1789625888/Product-Image2_lmhe7f.png"
+                                                    width="142"
+                                                    height="113"
+                                                    layout="responsive"
+                                                    style="
+                                                     width: 142px; height: auto;
+                                                    "></amp-img>
+                                            </td>
+                                            <td>
+                                                <h2>smart watch</h2>
+                                                <p>fitness tracker Brown</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                </table>
+            </td>
+        </tr>
+
+
         </table>
     </center>
 </body>
-
 </html>
