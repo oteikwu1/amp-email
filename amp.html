@@ -6,6 +6,8 @@
     <title>My AMP Page</title>
     <link rel="canonical" href="self.html" />
     <meta name="viewport" content="width=device-width" />
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js">
+    </script>
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -62,6 +64,8 @@
             to {
                 visibility: visible
             }
+
+        
         }
     </style><noscript>
         <style amp-boilerplate>
@@ -73,6 +77,14 @@
             }
         </style>
     </noscript>
+<amp-state id="cart">
+    <script type="application/json">
+        {
+            "quantity": 1,
+            "unitPrice": 125.99
+        }
+    </script>
+</amp-state>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <style amp-custom>
         body {
@@ -162,6 +174,24 @@
             font-size: 22px;
             font-weight: 500;
         }
+
+    .cart-items {
+        font-size: 0;
+        white-space: nowrap;
+    }
+
+    .cart-items .cart-items-container {
+        max-width: 200px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .cart-items .cart-items-content {
+        font-size: 16px;
+        width: 100%;
+    }
+
     </style>
 </head>
 
@@ -318,71 +348,156 @@
                                     </tr>
                                 </table>
 
-                                <table class="cart-column">
+                                <table class="cart-column" role="presentation" cellpadding="0" cellspacing="0" border="0">
                                     <tr>
-                                        <td class="cart-padding" 
-                                        style="padding-left: 150px;"
-                                        >
-                                        <table class="cart-content">
-                                            <tr>
-                                            <td>
-                                            <p style="margin: 0; display: inline-block;vertical-align: middle;
-                                            ">
-                                            3 Items</p>
-                                            <amp-img alt="A view of the sea" src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793592286/amp-cart_djfd3u.png"
-                                                width="27" height="27" layout="responsive" style="display: inline-block; vertical-align: middle; width: 27px; height: auto;">
-                                            </amp-img>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                        <td class="cart-padding" style="padding-left: 150px;">
+                                
+                                            <table class="cart-content" role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                                <tr>
+                                                    <!-- Cart quantity -->
+                                                    <td style="vertical-align: middle; white-space: nowrap;">
+                                
+                                                        <p style="margin: 0; display: inline-block;
+                                                            vertical-align: middle;">
+                                                            <span [text]="cart.quantity">3</span>
+                                                            Items
+                                                        </p>
+                                
+                                                        <amp-img alt="Shopping cart"
+                                                            src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793592286/amp-cart_djfd3u.png"
+                                                            width="27" height="27" layout="fixed"
+                                                            style="display: inline-block; vertical-align: middle;">
+                                                        </amp-img>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                            
                                         </td>
                                     </tr>
                                 </table>
+
+                            
                             </td>
                         </tr>
 
                     </table>
                 </td>
             </tr>
-
-        <tr>
+         <tr>
             <td>
-                <table width="100%" role="presentation">
-
+                <table width="100%">
+                
                 <tr>
-                    <td class="cart-products-container">
+                <td class="cart-items">
 
-                        <table class="cart-products">
+                        <table class="cart-items-container">
                             <tr>
-                                <td class="cart product-padding">
-                                    <table class="cart-products-content">
+                                <td class="cart-items-padding">
+
+                                    <table class="cart-items-content">
                                         <tr>
                                             <td>
-                                                <amp-img
-                                                 alt="A view of the sea"
+                                             <amp-img
+                                              alt="A view of the sea"
                                                     src="https://res.cloudinary.com/qyksrgfe/image/upload/v1789625888/Product-Image2_lmhe7f.png"
                                                     width="142"
-                                                    height="113"
+                                                    height="115"
                                                     layout="responsive"
-                                                    style="
-                                                     width: 142px; height: auto;
-                                                    "></amp-img>
-                                            </td>
-                                            <td>
-                                                <h2>smart watch</h2>
-                                                <p>fitness tracker Brown</p>
+                                                    style="width: 140px; height: auto;">
+                                             </amp-img>
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
                             </tr>
                         </table>
-                    </td>
+
+                    <table class="cart-items-container">
+                        <tr>
+                            <td class="cart-items-padding">
+                    
+                                <table class="cart-items-content">
+                                    <tr>
+                                        <td>
+                                           <h3>smart watch</h3>
+                                           <p>fitness tracker Brown</p>
+                                            <p>
+                                                $
+                                                <span [text]="(cart.quantity * cart.unitPrice).toFixed(2)">
+                                                    125.99
+                                                </span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                  <tr>
+                                    <td>
+                                    <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <!-- Reduce button -->
+                                            <td>
+                                                <button type="button" on="tap:AMP.setState({
+                                                    cart: {quantity: max(0, cart.quantity - 1)}})" style="width: 35px;  height: 35px;
+                                                             border: 1px solid #cccccc;
+                                                              background: #ffffff;
+                                                             font-size: 20px;
+                                                             cursor: pointer;
+                                                         ">
+                                                    −
+                                                </button>
+                                            </td>
+                                    
+                                            <!-- Quantity -->
+                                            <td style="
+                                                      padding: 0 15px;
+                                                    text-align: center;
+                                                     font-size: 16px;
+                                                    ">
+                                                <span [text]="cart.quantity">
+                                                    1
+                                                </span>
+                                            </td>
+                                    
+                                            <!-- Add button -->
+                                            <td>
+                                                <button type="button" on="tap:AMP.setState({  cart: { quantity: cart.quantity + 1
+                                                   })" style="  width: 35px;
+                                                             height: 35px;
+                                                            border: 1px solid #cccccc;
+                                                             background: #ffffff;
+                                                             font-size: 20px;
+                                                             cursor: pointer;
+                                                         ">
+                                                    +
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                 
+                    <table class="cart-items-container">
+                        <tr>
+                            <td class="cart-items-padding">
+                                <table class="cart-items-content">
+                                    <tr>
+                                        <td>
+                                            <p>Cancel</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
                 </tr>
+
                 </table>
             </td>
-        </tr>
-
+         </tr>
 
         </table>
     </center>
