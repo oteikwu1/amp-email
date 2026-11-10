@@ -110,7 +110,7 @@
             width: 100%;
             margin: 0 auto;
             color: #3a3a3a;
-            background-color: #f2f2f2;
+            background-color: red;
             font-family: sans-serif, 'poppins';
             border-spacing: 0;
         }
@@ -406,10 +406,10 @@
 
             <tr>
                 <td>
-                    <table width="100%">
+                    <table width="100%" >
 
                         <tr>
-                            <td class="cart-items" [hidden]=cart.remove>
+                            <td class="cart-items" [hidden]=cart.remove style="padding: 20px;">
 
                                 <table class="cart-items-container">
                                     <tr>
@@ -547,10 +547,10 @@
 
             <tr>
                 <td>
-                    <table width="100%">
+                    <table width="100%" >
 
                         <tr>
-                            <td class="cart-items" [hidden]=cart.remove>
+                            <td class="cart-items" [hidden]=cart.remove style="padding: 0 20px;">
 
                                 <table class="cart-items-container">
                                     <tr>
@@ -682,7 +682,7 @@
                     <table width="100%">
 
                         <tr>
-                            <td class="cart-items" [hidden]=cart.remove>
+                            <td class="cart-items" [hidden]=cart.remove style="padding: 20px;">
 
                                 <table class="cart-items-container">
                                     <tr>
@@ -801,14 +801,27 @@
             </tr>
 
         <tr>
-            <td style="background-color: #EFF6FD;">
+            <td align="center" style="background-color: #ffffff; padding: 30px 0;">
+            <table width="90%" style="background-color: #EFF6FD;
+               border-radius: 8px;
+            ">
+                <tr>
+                <td>
+           
                 <table width="100%">
                     <tr>
-                        <td style="width: 15%;">
-                            <img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794274756/timing-icon_aafkr4.png" alt="">
+                        <td style="width: 10%; padding: 20px 20px 0;">
+                        <amp-img alt="A view of the sea" 
+                        src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794274756/timing-icon_aafkr4.png"
+                         width="900" height="900"
+                         layout="responsive"
+                         style="width: 28px; height: auto; vertical-align: middle;"
+                         >
+                        </amp-img>
                         </td>
-                        <td>
-                            <p>need more time?</p>
+                        <td style="margin: 0;">
+                            <p style="margin: 0; text-transform: capitalize; vertical-align: middle;">
+                             need more time?</p>
                         </td>
                     </tr>
                 </table>
@@ -816,8 +829,9 @@
                     <td>
                         <table width="100%" role="presentation">
                             <tr>
-                                <td>
-                                    <p>your cart will be save for the next 24hr</p>
+                                <td style="padding: 0 0 20px ; margin: 0;">
+                                    <p style="margin: 0; margin-left: 60px;">
+                                        Your cart will be save for the next 24hr</p>
                                 </td>
                             </tr>
                         </table>
@@ -826,16 +840,62 @@
             </td>
         </tr>
 
+         </td>
+         </tr>
+        </table>
+
+    <tr>
+        <td align="right">
+            <table width="100%" role="presentation" style="background-color: #fff;">
+                <tr>
+                    <td>
+                        <p style="text-align: right; padding-right: 40px; margin: 10px 0;">
+                            Subtotal 
+                            <span style="padding-left: 40px;" [text]="(
+                            (cart.product1.removed ? 0 : cart.product1.quantity * cart.product1.unitPrice) +
+                            (cart.product2.removed ? 0 : cart.product2.quantity * cart.product2.unitPrice) +
+                            (cart.product3.removed ? 0 : cart.product3.quantity * cart.product3.unitPrice)
+                            ).toFixed(2)">
+                            $168.19</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="text-align: right; padding-right: 40px; margin: 10px 0;">
+                            Shipping
+                            <span style="color: #6155F5; font-weight: 600;padding-left: 60px;">
+                                Free</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <p style="text-align: right; padding-right: 40px; margin: 12px 0;">
+                        Total
+                        <span style="font-weight: 600;padding-left: 70px;" [text]="(
+                                 (cart.product1.removed ? 0 : cart.product1.quantity * cart.product1.unitPrice) +
+                                (cart.product2.removed ? 0 : cart.product2.quantity * cart.product2.unitPrice) +
+                                (cart.product3.removed ? 0 : cart.product3.quantity * cart.product3.unitPrice)
+                              ).toFixed(2)">
+                            $168.19</span>
+                    </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
      <tr>
         <td align="center">
             <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                style="border-collapse:separate;line-height:100%;">
+                style="border-collapse:separate;line-height:100%; padding: 30px 0;">
                 <tr>
                     <td>
                         <div>
-                            <!--[if mso]> <v:roundrect xmlns_v="urn:schemas-microsoft-com:vml" xmlns_w="urn:schemas-microsoft-com:office:word" href="https://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:330px;" arcsize="5%" strokecolor="#" fillcolor="#0088FF;width: 130;"> <w:anchorlock/> <center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Complete your Order</center> </v:roundrect> <![endif]-->
+                            <!--[if mso]> <v:roundrect xmlns_v="urn:schemas-microsoft-com:vml" xmlns_w="urn:schemas-microsoft-com:office:word" href="https://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:400px;" arcsize="5%" strokecolor="#" fillcolor="#0088FF;width: 130;"> <w:anchorlock/> <center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Complete your Order</center> </v:roundrect> <![endif]-->
                             <a href="https://www.activecampaign.com"
-                                style="display: inline-block; mso-hide:all; background-color: #0088FF; color: #FFFFFF; border:none; border-radius: 6px; line-height: 220%; width: 400px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:500; text-align: center; text-decoration: none; -webkit-text-size-adjust:none; "
+                                style="display: inline-block; mso-hide:all; background-color: #0088FF; color: #FFFFFF; border:none; border-radius: 6px; line-height: 220%; width: 500px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:500; text-align: center; text-decoration: none; -webkit-text-size-adjust:none; "
                                 target="_blank">Complete your Order</a> </a> </div>
                     </td>
                 </tr>
@@ -845,7 +905,7 @@
      </tr>
 
 
-        </table>
+    </table>
     </center>
 </body>
 
