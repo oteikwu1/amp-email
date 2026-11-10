@@ -516,23 +516,24 @@
                                     <tr>
                                         <td class="cart-items-padding">
                                             <table class="cart-items-content">
-                                                <tr>
-                                                <td>
+                                            <tr>
+                                            <td>
                                             <button type="button" on="tap:AMP.setState({
                                             cart: {
                                              quantity: 0,
                                              unitPrice: cart.unitPrice,
-                                             removed: true}})" style="
+                                             removed: true}})" 
+                                             style="
                                              background: none;
                                              border: none;
                                              color: red;
                                              text-decoration: underline;
                                             cursor: pointer;
                                             font-size: 14px;">
-                                                            Cancel
-                                                        </button>
-                                                    </td>
-                                                </tr>
+                                                 Cancel
+                                            </button>
+                                            </td>
+                                            </tr>
                                             </table>
                                         </td>
                                     </tr>
@@ -723,7 +724,7 @@
                                                     <td>
                                                         <table role="presentation" cellpadding="0" cellspacing="0">
                                                             <tr>
-                                                                <!-- Reduce -->
+                                                              
                                                                 <td>
                                                                     <button type="button" on="tap:AMP.setState({
                                                                         cart: {
@@ -740,7 +741,7 @@
                                                                         −</button>
                                                                 </td>
 
-                                                                <td>
+                                                                <td style="padding: 0 15px;">
                                                                     <span [text]="cart.product3.quantity">1</span>
                                                                 </td>
 
@@ -798,6 +799,51 @@
                     </table>
                 </td>
             </tr>
+
+        <tr>
+            <td style="background-color: #EFF6FD;">
+                <table width="100%">
+                    <tr>
+                        <td style="width: 15%;">
+                            <img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794274756/timing-icon_aafkr4.png" alt="">
+                        </td>
+                        <td>
+                            <p>need more time?</p>
+                        </td>
+                    </tr>
+                </table>
+                <tr>
+                    <td>
+                        <table width="100%" role="presentation">
+                            <tr>
+                                <td>
+                                    <p>your cart will be save for the next 24hr</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </td>
+        </tr>
+
+     <tr>
+        <td align="center">
+            <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                style="border-collapse:separate;line-height:100%;">
+                <tr>
+                    <td>
+                        <div>
+                            <!--[if mso]> <v:roundrect xmlns_v="urn:schemas-microsoft-com:vml" xmlns_w="urn:schemas-microsoft-com:office:word" href="https://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:330px;" arcsize="5%" strokecolor="#" fillcolor="#0088FF;width: 130;"> <w:anchorlock/> <center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Complete your Order</center> </v:roundrect> <![endif]-->
+                            <a href="https://www.activecampaign.com"
+                                style="display: inline-block; mso-hide:all; background-color: #0088FF; color: #FFFFFF; border:none; border-radius: 6px; line-height: 220%; width: 400px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:500; text-align: center; text-decoration: none; -webkit-text-size-adjust:none; "
+                                target="_blank">Complete your Order</a> </a> </div>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+     </tr>
+
 
         </table>
     </center>
