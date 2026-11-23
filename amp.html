@@ -1,84 +1,15 @@
 <!doctype html>
-<html ⚡>
+<html ⚡4email data-css-strict>
 
 <head>
     <meta charset="utf-8">
-    <title>My AMP Page</title>
-    <link rel="canonical" href="self.html" />
-    <meta name="viewport" content="width=device-width" />
-    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js">
-    </script>
-    <style amp-boilerplate>
-        body {
-            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            animation: -amp-start 8s steps(1, end) 0s 1 normal both
-        }
-
-        @-webkit-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @-moz-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @-ms-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @-o-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-
-
-        }
-    </style><noscript>
-        <style amp-boilerplate>
-            body {
-                -webkit-animation: none;
-                -moz-animation: none;
-                -ms-animation: none;
-                animation: none
-            }
-        </style>
-    </noscript>
-
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp4email-boilerplate>
+        body {
+            visibility: hidden
+        }
+    </style>
+
     <style amp-custom>
         body {
             visibility: hidden
@@ -137,7 +68,7 @@
         }
 
         .hero-container {
-            -size: 0;
+            font-size: 0;
         }
 
         .hero-container .hero-column {
@@ -153,6 +84,16 @@
 
         .hero-padding {
             padding: 12px 50px;
+        }
+
+        .hero-btn {
+            background-color: #0088FF;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #fff;
         }
 
         .cart-section {
@@ -184,6 +125,63 @@
             font-size: 16px;
             width: 100%;
         }
+
+        .return-section {
+            font-size: 0;
+            background-color: #FFFFFF;
+        }
+
+        .return-section .return-column {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 200px;
+            width: 100%;
+        }
+
+        .return-content {
+            font-size: 16px;
+        }
+
+        .order-btn {
+            background-color: #0088FF;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #fff;
+            margin: 16px 0;
+            width: 80%;
+        }
+
+        .add-to-cart-btn1,
+        .add-to-cart-btn2,
+        .add-to-cart-btn3{
+            background-color: #0088FF;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #fff;
+            margin: 16px 0; 
+        }
+
+        .likes-section {
+            font-size: 0;
+            text-align: center;
+        }
+
+        .likes-section .like-card {
+            max-width: 200px;
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .likes-section .like-content {
+            font-size: 16px;
+        }
     </style>
 </head>
 
@@ -209,7 +207,7 @@
       }
     </script>
     </amp-state>
-    <center class="wrapper">
+    <div class="wrapper">
         <table class="email-container" style="background-color: #f2f2f2;">
 
             <!-- Navigation -->
@@ -297,20 +295,9 @@
 
                                                 <tr>
                                                     <td>
-                                                        <table border="0" cellpadding="0" cellspacing="0"
-                                                            role="presentation"
-                                                            style="border-collapse:separate;line-height:100%;">
-                                                            <tr>
-                                                                <td>
-                                                                    <div>
-                                                                        <!--[if mso]> <v:roundrect xmlns_v="urn:schemas-microsoft-com:vml" xmlns_w="urn:schemas-microsoft-com:office:word" href="https://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" strokecolor="#0088FF" fillcolor="#0088FF;width: 130;"> <w:anchorlock/> <center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 500;">Click here!</center> </v:roundrect> <![endif]-->
-                                                                        <a href="https://www.activecampaign.com"
-                                                                            style="display: inline-block; mso-hide:all; background-color: #0088FF; color: #FFFFFF; border:1px solid #0088FF; border-radius: 6px; line-height: 220%; width: 200px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:500; text-align: center; text-decoration: none; -webkit-text-size-adjust:none; "
-                                                                            target="_blank">Complete Your Order</a> </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
+                                                     <button class="hero-btn">
+                                                        complete your order
+                                                     </button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -887,26 +874,229 @@
     </tr>
 
      <tr>
-        <td align="center">
-            <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                style="border-collapse:separate;line-height:100%; padding: 30px 0;">
-                <tr>
-                    <td>
-                        <div>
-                            <!--[if mso]> <v:roundrect xmlns_v="urn:schemas-microsoft-com:vml" xmlns_w="urn:schemas-microsoft-com:office:word" href="https://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:400px;" arcsize="5%" strokecolor="#" fillcolor="#0088FF;width: 130;"> <w:anchorlock/> <center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Complete your Order</center> </v:roundrect> <![endif]-->
-                            <a href="https://www.activecampaign.com"
-                                style="display: inline-block; mso-hide:all; background-color: #0088FF; color: #FFFFFF; border:none; border-radius: 6px; line-height: 220%; width: 500px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:500; text-align: center; text-decoration: none; -webkit-text-size-adjust:none; "
-                                target="_blank">Complete your Order</a> </a> </div>
-                    </td>
-                </tr>
-            </table>
-
+        <td align="center" style="background-color: #fff;">
+         <button class="order-btn">
+            Complete Your Order
+         </button>
         </td>
      </tr>
 
+    <tr>
+        <td>
+            <table width="100%">
+                <tr>
+                    <td class="return-section" style="padding-bottom: 20px;">
+
+                        <table class="return-column">
+                            <tr>
+                                <td style="padding-left: 16px;">
+                                    <table class="return-padding" style="padding: 0 10px;">
+                                        <tr>
+                                            <td>
+                                                <table class="return-content">
+                                                    <tr>
+                                                        <td>
+                                                        <amp-img alt="security lock"
+                                                         src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794291574/amp-lock_mofmdq.png" width="900" height="900"
+                                                        layout="responsive" style="width: 24px; height: 27px; display: inline-block; vertical-align: middle;">
+                                                        </amp-img>
+                                                        </td>
+                                                        <td>
+                                                            <p style="vertical-align: middle;padding: 0 8px;">
+                                                            Secure Checkout</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                    <table class="return-column">
+                        <tr>
+                            <td>
+                                <table class="return-padding">
+                                    <tr>
+                                        <td>
+                                            <table class="return-content">
+                                                <tr>
+                                                    <td>
+                                                        <amp-img alt="security lock"
+                                                            src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794291679/amp-lorry_l7c4cd.png"
+                                                            width="900" height="900" layout="responsive"
+                                                            style="width: 30px; height: 21px; display: inline-block; vertical-align: middle;">
+                                                        </amp-img>
+                                                    </td>
+                                                    <td>
+                                                        <p style="vertical-align: middle;padding: 0 8px;">
+                                                            Free shipping <br>
+                                                            above $50
+                                                    </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                <table class="return-column">
+                    <tr>
+                        <td>
+                            <table class="return-padding">
+                                <tr>
+                                    <td>
+                                        <table class="return-content">
+                                            <tr>
+                                                <td>
+                                                    <amp-img alt="security lock"
+                                                        src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794291702/amp-return_n1oskv.png"
+                                                        width="900" height="900" layout="responsive"
+                                                        style="width: 24px; height: 23px; display: inline-block; vertical-align: middle;">
+                                                    </amp-img>
+                                                </td>
+                                                <td>
+                                                    <p style="vertical-align: middle;padding: 0 8px;">
+                                                        30 days easily return
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="padding: 0 30px;">
+            <h3>You might also like</h3>
+        </td>
+    </tr>
+
+<tr>
+    <td>
+        <table width="100%">
+            <tr>
+                <td class="likes-section">
+                    <table class="like-card">
+                        <tr>
+                            <td>
+                                <table class="like-content" style="
+                                    background-color: #fff;
+                                    border-radius: 8px;
+                                    padding: 20px;
+                                    ">
+                                    <tr>
+                                        <td>
+                                            <amp-img 
+                                             src="https://res.cloudinary.com/qyksrgfe/image/upload/v1795397849/portable-speaker_g1zqcn.png"
+                                              width="106"
+                                              height="60"
+                                            >
+                                            </amp-img>
+                                            <p>
+                                                Portable Speaker
+                                            </p>
+                                            <p>$50.21</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button class="add-to-cart-btn1">
+                                                Add To Cart
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                <table class="like-card">
+                    <tr>
+                        <td>
+                            <table class="like-content"
+                             style="
+                                    background-color: #fff;
+                                    border-radius: 8px;
+                                    padding: 20px;
+                                   ">
+                                <tr>
+                                    <td>
+                                        <amp-img
+                                            src="https://res.cloudinary.com/qyksrgfe/image/upload/v1795397849/portable-speaker_g1zqcn.png"
+                                            width="106" height="60">
+                                        </amp-img>
+                                        <p>
+                                            Portable Speaker
+                                        </p>
+                                        <p>$50.21</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="add-to-cart-btn1">
+                                            Add To Cart
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            <table class="like-card">
+                <tr>
+                    <td>
+                        <table class="like-content"
+                         style="
+                             background-color: #fff;
+                            border-radius: 8px;
+                            padding: 20px;
+                          ">
+                            <tr>
+                                <td>
+                                    <amp-img
+                                        src="https://res.cloudinary.com/qyksrgfe/image/upload/v1795397849/portable-speaker_g1zqcn.png"
+                                        width="106" height="60">
+                                    </amp-img>
+                                    <p>
+                                        Portable Speaker
+                                    </p>
+                                    <p>$50.21</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="add-to-cart-btn1">
+                                        Add To Cart
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
 
     </table>
-    </center>
+    <div/>
 </body>
 
 </html>
