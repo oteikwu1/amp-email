@@ -193,20 +193,26 @@
         font-size: 16px;
       }
 
-        .footer-container {
-            font-size: 0;
-        }
+      .footer-container {
+        font-size: 0;
+        text-align: center;
+      } 
 
-        .footer-container .footer-column {
-            max-width: 300px;
-            width: 100%;
-            display: inline-block;
-            vertical-align: middle;
-        }
+      .footer-container .footer-column {
+        max-width: 300px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+      }
 
-        .footer-column .footer-content {
-            font-size: 16px;
-        }
+      .footer-container .footer-padding {
+        padding: 12px 0;
+      }
+
+      .footer-container .footer-content {
+        font-size: 16px;
+      }
+
     </style>
 </head>
 
@@ -1164,80 +1170,76 @@
 <tr>
     <td>
         <table width="100%" role="presentation">
+
             <tr>
                 <td class="footer-container">
                     <table class="footer-column">
                         <tr>
-                            <td>
-                                <table class="footer-padding">
+                            <td class="footer-padding" style="padding: 0 20px;">
+                                <table class="footer-content">
                                     <tr>
                                         <td>
-                                            <table class="footer-content">
-                                                <tr>
-                                                    <td>
-                                                        <amp-img
-                                                          src="https://res.cloudinary.com/qyksrgfe/image/upload/v1792249618/signature-facebook-white_migipi.png"
-                                                            width="26"
-                                                            height="26"
-                                                            alt="facebook icon"
-                                                        >
-                                                        </amp-img>
-                                                        <amp-img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1792249968/signature-ig-white_abw5kf.png"
-                                                            width="26" 
-                                                            height="26"
-                                                             alt="instagram icon">
-                                                        </amp-img>
-                                                        <amp-img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1795485858/twitter_af5yjs.png"
-                                                            width="26"
-                                                             height="26"
-                                                             alt="Twitter icon">
-                                                        </amp-img>
-                                                        <amp-img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1792250268/ticktok-signature_vfufmw.png"
-                                                            width="26"
-                                                            height="26"
-                                                            alt="Tiktok icon">
-                                                        </amp-img>
-                                                    </td>
-                                                </tr>
-                                            </table>
+                                        <amp-img 
+                                         src="https://res.cloudinary.com/qyksrgfe/image/upload/v1792249618/signature-facebook-white_migipi.png"
+                                         height="26"
+                                         width="26"
+                                         alt="Facebook Icon"
+                                         style="display: inline-block; vertical-align: middle;
+                                         margin: 0 4px;
+                                         "
+                                        >
+                                        </amp-img>
+                                        <amp-img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1795485858/twitter_af5yjs.png"
+                                            height="26" width="26" alt="Twitter Icon" style="display: inline-block; vertical-align: middle;
+                                             margin: 0 4px;
+                                            ">
+                                        </amp-img>
+                                        <amp-img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1792250268/ticktok-signature_vfufmw.png"
+                                            height="26" width="26" alt="Facebook Icon" style="display: inline-block; vertical-align: middle;
+                                                margin: 0 4px;
+                                            ">
+                                        </amp-img>
+                                        <amp-img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1792249968/signature-ig-white_abw5kf.png"
+                                            height="26" width="26" alt="Facebook Icon" style="display: inline-block; vertical-align: middle;
+                                            margin: 0 4px;
+                                            ">
+                                        </amp-img>
                                         </td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                     </table>
-                
-                 <table class="footer-column">
-                        <tr>
-                            <td>
-                                <table class="footer-padding">
-                                    <tr>
-                                        <td>
-                                            <table class="footer-content">
-                                                <tr>
-                                                    <td>
-                                                       <p style="margin: 6px;">
-                                                        &copy; 
-                                                    2026 gadgetHub. all rights reserved
-                                                       </p> 
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td >
-                                                        <a href="https://res.cloudinary.com"
-                                                        style="text-decoration: none; color: #0A1C2D; font-size: 14px; font-weight: bold;">
-                                                            Unsubscribed |</a>
-                                                        <a href="https://res.cloudinary.com" style="text-decoration: none; color: #0A1C2D; font-size: 14px; font-weight: bold;">Privacy Policy |</a>
-                                                        <a href="https://res.cloudinary.com" style="text-decoration: none; color: #0A1C2D; font-size: 14px; font-weight: bold;">Contact Us</a>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+
+                <table class="footer-column">
+                    <tr>
+                        <td class="footer-padding" style="padding: 0 20px;">
+                            <table class="footer-content">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0; text-align: center; margin: 0;
+                                           font-size: 14px;
+                                        ">
+                                            &copy; 2024 Gadget Hub. All rights reserved.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0; text-align: center; margin: 0;">
+                                            <a href="" style="text-decoration: none; color: #3a3a3a;">
+                                                Unsubscribed |</a>
+                                            <a href="" style="text-decoration: none; color: #3a3a3a;">
+                                                Privacy Policy |</a>
+                                            <a href="" style="text-decoration: none; color: #3a3a3a;">
+                                                Terms of Service</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
                 </td>
             </tr>
         </table>
