@@ -98,24 +98,6 @@
             color: #fff;
         }
 
-        .cart-section {
-            font-size: 0;
-        }
-
-        .cart-section .cart-column {
-            display: inline-block;
-            vertical-align: middle;
-            max-width: 300px;
-            width: 100%;
-            font-size: 22px;
-            font-weight: 500;
-        }
-
-        .cart-items {
-            font-size: 0;
-            white-space: nowrap;
-        }
-
         .cart-items .cart-items-container {
             max-width: 200px;
             width: 100%;
@@ -361,65 +343,47 @@
                 </td>
             </tr>
 
-            <tr>
-                <td>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                        <tr>
-                            <td class="cart-section">
-                                <table class="cart-column">
-                                    <tr>
-                                        <td class="cart-padding" style="padding-left: 40px;">
-                                            <table class="cart-content">
-                                                <tr>
-                                                    <td>
-                                                        <p>Your cart</p>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
+    <tr>
+        <td>
+            <table width="100%" role="presentation">
+                <tr>
+                    <td class="update-cart-container" style="background-color: #fff; padding: 20px;">
+                        <table width="100%" role="presentation">
+                            <tr>
+                            
+                                <td align="left" valign="middle">
+                                    <p style="margin: 0;">
+                                        Your Cart
+                                    </p>
+                                </td>
+    
+                                <td align="right" valign="middle" style="white-space: nowrap;">
+    
+                                    <p style="margin: 0; display: inline-block;
+                                              vertical-align: middle;">
+                                        <span [text]="
+                                            (cart.product1.removed ? 0 : cart.product1.quantity) +
+                                            (cart.product2.removed ? 0 : cart.product2.quantity) +
+                                            (cart.product3.removed ? 0 : cart.product3.quantity)
+                                        ">3</span>
+                                        Items
+                                    </p>
+    
+                                    <amp-img alt="Shopping cart"
+                                        src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793592286/amp-cart_djfd3u.png"
+                                        width="27" height="27" layout="fixed"
+                                        style="display: inline-block; vertical-align: middle;">
+                                    </amp-img>
+    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
 
-                                <table class="cart-column" role="presentation" cellpadding="0" cellspacing="0"
-                                    border="0">
-                                    <tr>
-                                        <td class="cart-padding" style="padding-left: 150px;">
-
-                                            <table class="cart-content" role="presentation" cellpadding="0"
-                                                cellspacing="0" border="0">
-                                                <tr>
-                                                    <!-- Cart quantity -->
-                                                    <td style="vertical-align: middle; white-space: nowrap;">
-
-                                                        <p style="margin: 0; display: inline-block;
-                                                            vertical-align: middle;">
-                                                            <span [text]="
-                                                            (cart.product1.removed ? 0 : cart.product1.quantity) +
-                                                            (cart.product2.removed ? 0 : cart.product2.quantity) +
-                                                            (cart.product3.removed ? 0 : cart.product3.quantity)
-                                                        ">3</span>
-                                                        </p>
-
-                                                        <amp-img alt="Shopping cart"
-                                                            src="https://res.cloudinary.com/qyksrgfe/image/upload/v1793592286/amp-cart_djfd3u.png"
-                                                            width="27" height="27" layout="fixed"
-                                                            style="display: inline-block; vertical-align: middle;">
-                                                        </amp-img>
-                                                    </td>
-                                                </tr>
-                                            </table>
-
-                                        </td>
-                                    </tr>
-                                </table>
-
-
-                            </td>
-                        </tr>
-
-                    </table>
-                </td>
-            </tr>
 
 
             <tr>
@@ -1217,7 +1181,7 @@
                             <table class="footer-content">
                                 <tr>
                                     <td>
-                                        <p style="margin: 0; text-align: center; margin: 0;
+                                        <p style=" text-align: center; margin: 0;
                                            font-size: 14px;
                                         ">
                                             &copy; 2024 Gadget Hub. All rights reserved.
@@ -1225,8 +1189,9 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <p style="margin: 0; text-align: center; margin: 0;">
+                                    <td style="padding: 8px 0;">
+                                        <p style="margin: 20px 0; text-align: center;
+                                         margin: 0; font-size: 14px;">
                                             <a href="" style="text-decoration: none; color: #3a3a3a;">
                                                 Unsubscribed |</a>
                                             <a href="" style="text-decoration: none; color: #3a3a3a;">
