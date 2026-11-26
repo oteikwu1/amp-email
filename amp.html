@@ -128,23 +128,7 @@
             width: 100%;
         }
 
-        .return-section {
-            font-size: 0;
-            background-color: #FFFFFF;
-        }
-
-        .return-section .return-column {
-            display: inline-block;
-            vertical-align: middle;
-            max-width: 200px;
-            width: 100%;
-        }
-
-        .return-content {
-            font-size: 16px;
-        }
-
-        .order-btn {
+         .order-btn {
             background-color: #0088FF;
             padding: 12px 20px;
             border: none;
@@ -156,18 +140,27 @@
             width: 80%;
         }
 
-        .add-to-cart-btn1,
-        .add-to-cart-btn2,
-        .add-to-cart-btn3{
-            background-color: #0088FF;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            text-transform: capitalize;
-            color: #fff;
-            margin-bottom: 16px;
-        }
+    .order-column-container {
+        font-size: 0;
+        text-align: center;
+    }
+
+      .order-column-container .order-column{
+        max-width: 180px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+      .order-column-container .order-padding {
+        padding: 8px 0 10px;
+      }
+
+      .order-column-container .order-content {
+        font-size: 16px;
+          padding: 8px 0 10px;
+      }
 
       .three-column {
         font-size: 0;
@@ -915,60 +908,28 @@
 
     <tr>
         <td>
-            <table width="100%">
-                <tr>
-                    <td class="return-section" style="padding-bottom: 20px;">
+            <table width="100%" style="background-color: #fff;">
+             
+            <tr>
+                <td class="order-column-container">
 
-                        <table class="return-column">
-                            <tr>
-                                <td style="padding-left: 16px;">
-                                    <table class="return-padding" style="padding: 0 10px;">
-                                        <tr>
-                                            <td>
-                                                <table class="return-content">
-                                                    <tr>
-                                                        <td>
-                                                        <amp-img alt="security lock"
-                                                         src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794291574/amp-lock_mofmdq.png" width="900" height="900"
-                                                        layout="responsive" style="width: 24px; height: 27px; display: inline-block; vertical-align: middle;">
-                                                        </amp-img>
-                                                        </td>
-                                                        <td>
-                                                            <p style="vertical-align: middle;padding: 0 8px;">
-                                                            Secure Checkout</p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-
-                    <table class="return-column">
+                    <table width="100%" class="order-column">
                         <tr>
-                            <td>
-                                <table class="return-padding">
+                            <td class="order-padding">
+
+                                <table class="order-content">
                                     <tr>
                                         <td>
-                                            <table class="return-content">
-                                                <tr>
-                                                    <td>
-                                                        <amp-img alt="security lock"
-                                                            src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794291679/amp-lorry_l7c4cd.png"
-                                                            width="900" height="900" layout="responsive"
-                                                            style="width: 30px; height: 21px; display: inline-block; vertical-align: middle;">
-                                                        </amp-img>
-                                                    </td>
-                                                    <td>
-                                                        <p style="vertical-align: middle;padding: 0 8px;">
-                                                            Free shipping <br>
-                                                            above $50
-                                                    </p>
-                                                    </td>
-                                                </tr>
-                                            </table>
+                                           <amp-img
+                                             src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794291574/amp-lock_mofmdq.png"
+                                             alt="secure Lock"
+                                             height="27"
+                                             width="24"
+                                             style="display: inline-block; vertical-align: middle;"
+                                           >
+                                           </amp-img> 
+                                           <p style="display: inline-block; vertical-align: middle;">
+                                            Secure Checkout</p>
                                         </td>
                                     </tr>
                                 </table>
@@ -976,36 +937,49 @@
                         </tr>
                     </table>
 
-                <table class="return-column">
+                <table class="order-column">
                     <tr>
-                        <td>
-                            <table class="return-padding">
+                        <td class="order-padding" >
+                
+                            <table class="order-content">
                                 <tr>
-                                    <td>
-                                        <table class="return-content">
-                                            <tr>
-                                                <td>
-                                                    <amp-img alt="security lock"
-                                                        src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794291702/amp-return_n1oskv.png"
-                                                        width="900" height="900" layout="responsive"
-                                                        style="width: 24px; height: 23px; display: inline-block; vertical-align: middle;">
-                                                    </amp-img>
-                                                </td>
-                                                <td>
-                                                    <p style="vertical-align: middle;padding: 0 8px;">
-                                                        30 days easily return
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                    <td style="padding: 0 20px;">
+                                        <amp-img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794291679/amp-lorry_l7c4cd.png"
+                                            alt="secure Lock" height="27" width="24"
+                                            style="display: inline-block; vertical-align: middle;">
+                                        </amp-img>
+                                        <p style="display: inline-block; vertical-align: middle;">
+                                            Free Shipping <br>
+                                            Above $50
+                                        </p>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                 </table>
+
+            <table class="order-column">
+                <tr>
+                    <td class="order-padding">
+            
+                        <table class="order-content">
+                            <tr>
+                                <td>
+                                    <amp-img src="https://res.cloudinary.com/qyksrgfe/image/upload/v1794291702/amp-return_n1oskv.png"
+                                        alt="secure Lock" height="27" width="24"
+                                        style="display: inline-block; vertical-align: middle;">
+                                    </amp-img>
+                                    <p style="display: inline-block; vertical-align: middle;">
+                                        Secure Checkout</p>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
+            </table>
+                </td>
+            </tr>
             </table>
         </td>
     </tr>
