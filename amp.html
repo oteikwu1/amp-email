@@ -169,21 +169,36 @@
             margin-bottom: 16px;
         }
 
-        .likes-section {
-            font-size: 0;
-            text-align: center;
-        }
+      .three-column {
+        font-size: 0;
+        text-align: center;
+      }
 
-        .likes-section .like-card {
-            max-width: 200px;
-            width: 100%;
-            display: inline-block;
-            vertical-align: middle;
-        }
+      .three-column .column {
+        width: 100%;
+        max-width: 180px;
+        display: inline-block;
+        background-color: #fff;
+        margin: 20px 8px;
+        border-radius: 8px;
+      }
 
-        .likes-section .like-content {
-            font-size: 16px;
-        }
+       .three-column  .padding {
+        padding: 0 60x;
+       }
+
+      .three-column .content {
+        font-size: 16px;
+      }
+
+      .cart-btn {
+        border: none;
+        background-color: #0088FF;
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 9px;
+        font-size: 16px;
+      }
 
         .footer-container {
             font-size: 0;
@@ -812,7 +827,7 @@
                 <tr>
                 <td>
            
-                <table width="100%">
+                <table width="100%" role="presentation">
                     <tr>
                         <td style="width: 10%; padding: 20px 20px 0;">
                         <amp-img alt="A view of the sea" 
@@ -1000,109 +1015,86 @@
             <h3>You might also like</h3>
         </td>
     </tr>
-
-<tr>
+   
+    <tr>
     <td>
-        <table width="100%">
-            <tr>
-                <td class="likes-section">
-                    <table class="like-card">
-                        <tr>
-                            <td>
-                                <table class="like-content" style="
-                                    background-color: #fff;
-                                    border-radius: 8px;
-                                    width: 184px;
-                                    height: auto;
-                                    ">
-                                    <tr>
-                                        <td style="padding: 20px;">
-                                            <amp-img 
-                                             src="https://res.cloudinary.com/qyksrgfe/image/upload/v1795397849/portable-speaker_g1zqcn.png"
-                                              width="106"
-                                              height="60"
-                                            >
-                                            </amp-img>
-                                            <p style="margin: 6px;">
-                                                Portable Speaker
-                                            </p>
-                                            <p style="margin: 6px; font-weight: bold;">
-                                                $50.21</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button class="add-to-cart-btn1">
-                                                Add To Cart
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+     <table width="100%" role="presentation">
 
-                <table class="like-card">
+        <tr>
+            <td class="three-column">
+             
+            <table class="column">
+                
                     <tr>
-                        <td>
-                            <table class="like-content"
-                             style="
-                                    background-color: #fff;
-                                    border-radius: 8px;
-                                    width: 184px;
-                                    height: auto;
-                                   ">
+                        <td class="padding">
+
+                            <table class="content"
+                             style="margin: 20px 28px;">
                                 <tr>
-                                    <td style="padding: 20px;">
-                                        <amp-img
-                                            src="https://res.cloudinary.com/qyksrgfe/image/upload/v1795482523/phone-stand_glrcq9.png"
-                                            width="36" height="64">
-                                        </amp-img>
-                                        <p style="margin: 6px;">
-                                            Phone Stand
-                                        </p>
-                                        <p style="margin: 6px; font-weight: bold;">
-                                            $50.21</p>
-                                    </td>
+                                <td style="padding: 4px 0;">
+                                    <amp-img 
+                                     src="https://res.cloudinary.com/qyksrgfe/image/upload/v1795397849/portable-speaker_g1zqcn.png"
+                                     width="103"
+                                     height="60"
+                                    >
+                                    </amp-img>
+                                 </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <button class="add-to-cart-btn1">
-                                            Add To Cart
-                                        </button>
+                                    <p style="margin: 8px 0; text-transform: capitalize;">
+                                        Power Bank
+                                    </p>
                                     </td>
                                 </tr>
+                            <tr>
+                                <td>
+                                    <p style="margin: 0; font-weight: bold;">
+                                        $36.04
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 16px 0 0;">
+                                <button class="cart-btn">
+                                    Add To Cart
+                                </button>
+                               </td>
+                            </tr>
                             </table>
                         </td>
                     </tr>
-                </table>
-
-            <table class="like-card">
+            </table>
+        
+            <table class="column">
+            
                 <tr>
-                    <td>
-                        <table class="like-content"
-                         style="
-                             background-color: #fff;
-                            border-radius: 8px;
-                            width: 184px;
-                            height: auto;
-                          ">
+                    <td class="padding">
+            
+                        <table class="content" style="margin: 20px 28px;">
                             <tr>
-                                <td style="padding: 20px;">
+                                <td>
                                     <amp-img
                                         src="https://res.cloudinary.com/qyksrgfe/image/upload/v1795399485/power-bank_emy99e.png"
                                         width="74" height="68">
                                     </amp-img>
-                                    <p style="margin: 6px;">
-                                      Power Bank
-                                    </p>
-                                    <p style="margin: 6px; font-weight: bold;">
-                                        $50.21</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <button class="add-to-cart-btn1">
+                                    <p style="margin: 8px 0; text-transform: capitalize;">
+                                        portable speaker</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="margin: 0; font-weight: bold;">
+                                        $50.21</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 16px 0 0;">
+                                    <button class="cart-btn">
                                         Add To Cart
                                     </button>
                                 </td>
@@ -1111,11 +1103,53 @@
                     </td>
                 </tr>
             </table>
-                </td>
-            </tr>
-        </table>
+
+            <table class="column">
+            
+                <tr>
+                    <td class="padding">
+            
+                        <table class="content" style="margin: 20px 28px;">
+                            <tr>
+                                <td>
+                                    <amp-img
+                                        src="https://res.cloudinary.com/qyksrgfe/image/upload/v1795482523/phone-stand_glrcq9.png"
+                                        width="33" height="68">
+                                    </amp-img>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="margin: 8px 0;">
+                                        Phone Stand
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="margin: 0; font-weight: bold;">
+                                        $50.21
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 16px 0 0;">
+                                    <button class="cart-btn">
+                                        Add To Cart
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+      
+            </td>
+        </tr>
+
+    </table>    
     </td>
-</tr>
+    </tr>
 
 <tr>
     <td style="padding: 32px 0px;">
@@ -1125,13 +1159,13 @@
                 style="background-color: #08213A;
                        color: #fff;
                        text-align: center;
-                       padding: 20px 0;
+                       padding: 20px 24px;
                 "
                 >
-                <table class="sign-up-conte">
+                <table width="100%"  class="sign-up-conteainer">
                     <tr>
                         <td align="center">
-                            <p style="margin: 0;">Stay Connected</p>
+                            <p style="margin: 0; text-align: center;">Stay Connected</p>
                             <h5 style="font-size: 24px; margin: 10px;
                                      text-align: center;
                             ">
